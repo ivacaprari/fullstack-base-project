@@ -10,6 +10,7 @@
             'DemoApp.footer',
             'DemoApp.header',
             'DemoApp.blog-factory',
+            'DemoApp.blog-service',
             'textAngular',
             'DemoApp.limitHtml'
         ]);

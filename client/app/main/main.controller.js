@@ -5,25 +5,16 @@
         .module('DemoApp')
         .controller('MainCtrl', MainCtrl);
 
-    MainCtrl.$inject = ['BlogEntry', '$stateParams'];
+    MainCtrl.$inject = ['$stateParams', 'blogService'];
 
     /* @ngInject */
-    function MainCtrl(BlogEntry, $stateParams) {
+    function MainCtrl($stateParams, blogService) {
         var vm = this;
 
-        vm.getPost = getPost;
-        vm.getPosts = getPosts();
+        activate();
 
-        function getPosts() {
-            vm.posts = BlogEntry.query();
-        }
-
-        function getPost() {
-            return BlogEntry.get(
-                {
-                    id: $stateParams.id
-                }
-            );
+        function activate() {
+            vm.posts = blogService.getPosts();
         }
     }
 })();

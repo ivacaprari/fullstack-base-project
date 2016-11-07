@@ -1,13 +1,9 @@
-### To start working with this project:
+### To start working on this project:
 
 Install:
 
 * node.js
-
 * mongodb
-
-* bower by npm - npm install -g bower
-* grunt by npm - npm install -g grunt-cli
 
 Run:
 

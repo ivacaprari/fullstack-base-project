@@ -7,16 +7,18 @@
             return {
                 templateUrl: 'components/directives/header/header.html',
                 restrict: 'EA',
-                controller: headerCtl
+                controller: HeaderCtrl,
+                controllerAs: 'vm'
             };
         });
 
-    function headerCtl($scope, $location) {
+    function HeaderCtrl($location) {
+        var vm = this;
 
-        $scope.isCollapsed = true;
+        vm.isActive = isActive;
 
-        $scope.isActive = function(route) {
+        function isActive(route) {
             return route === $location.path();
-        };
+        }
     }
 })();

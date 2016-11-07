@@ -5,10 +5,10 @@
         .module('DemoApp')
         .controller('BlogCtrl', BlogCtrl);
 
-    BlogCtrl.$inject = ['BlogEntry', '$state', '$stateParams'];
+    BlogCtrl.$inject = ['$stateParams', 'blogService'];
 
     /* @ngInject */
-    function BlogCtrl(BlogEntry, $state, $stateParams) {
+    function BlogCtrl($stateParams, blogService) {
         var vm = this;
 
         vm.deletePost = deletePost;
@@ -17,10 +17,15 @@
         vm.getPost = getPost;
         vm.getPosts = getPosts();
 
-        //if does not have any state param in url get all post
-        if ($stateParams.id) {
-            vm.post = getPost();
+        activate()
+
+        function activate() {
+            //if does have any state param get it
+            if ($stateParams.id) {
+                vm.post = getPost();
+            }
         }
+
 
         /**
          * Edit post
@@ -29,9 +34,7 @@
             vm.submitted = true;
             if (vm.form.$valid) {
                 vm.post.date = moment();
-                BlogEntry.update({id: vm.post._id}, vm.post, function() {
-                    $state.go('blog');
-                });
+                blogService.updatePost(vm.post);
             }
         }
 
@@ -39,7 +42,7 @@
          * Get all Post
          */
         function getPosts() {
-            vm.posts = BlogEntry.query();
+            vm.posts = blogService.getPosts();
         }
 
         /**
@@ -47,17 +50,15 @@
          * @return {Object} post
          */
         function getPost() {
-            return BlogEntry.get({id: $stateParams.id});
+            return blogService.getPost($stateParams.id);
         }
 
         /**
          * Delete single post
-         * @param  {Object} post
+         * @param {Object} post
          */
         function deletePost(post) {
-            BlogEntry.remove({id: post._id}, function() {
-                $state.reload();
-            });
+            blogService.deletePost(post);
         }
 
         /**
@@ -67,9 +68,7 @@
             vm.submitted = true;
             if (vm.form.$valid) {
                 vm.post.date = moment();
-                BlogEntry.save(vm.post, function() {
-                    $state.go('blog');
-                });
+                blogService.addNewPost(vm.post)
             }
         }
     }
