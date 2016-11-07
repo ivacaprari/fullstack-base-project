@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('DemoApp')
+        .module('Blog')
         .config(function ($stateProvider) {
             $stateProvider
                 .state('main', {

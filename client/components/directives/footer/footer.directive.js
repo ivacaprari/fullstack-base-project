@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('DemoApp.footer')
+        .module('Blog.footer')
         .directive('ngFooter', function () {
             return {
                 templateUrl: 'components/directives/footer/footer.html',

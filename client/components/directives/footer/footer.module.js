@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('DemoApp.footer', []);
+        .module('Blog.footer', []);
 })();

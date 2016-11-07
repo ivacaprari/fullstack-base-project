@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('DemoApp')
+        .module('Blog')
         .controller('MainCtrl', MainCtrl);
 
     MainCtrl.$inject = ['$stateParams', 'blogService'];

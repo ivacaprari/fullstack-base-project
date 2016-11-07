@@ -4,7 +4,7 @@
     'use strict';
 
     angular
-        .module('DemoApp')
+        .module('Blog')
         .constant('constantValues', constantValues);
 
     function constantValues() {

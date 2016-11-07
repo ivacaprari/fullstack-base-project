@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('DemoApp.blog-service')
+        .module('Blog.blog-service')
         .service('blogService', blogService);
 
     blogService.$inject = ['BlogEntry', '$state'];

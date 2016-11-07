@@ -2,5 +2,5 @@
     'use strict';
 
     angular
-        .module('DemoApp.limitHtml', []);
+        .module('Blog.limitHtml', []);
 })();

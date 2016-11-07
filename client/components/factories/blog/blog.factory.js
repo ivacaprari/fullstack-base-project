@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular
-        .module('DemoApp.blog-factory')
+        .module('Blog.blog-factory')
         .factory('BlogEntry', BlogEntry);
 
     function BlogEntry($resource) {

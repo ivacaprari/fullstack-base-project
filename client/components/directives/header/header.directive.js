@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('DemoApp.header')
+        .module('Blog.header')
         .directive('ngHeader', function() {
             return {
                 templateUrl: 'components/directives/header/header.html',

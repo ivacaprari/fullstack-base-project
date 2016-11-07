@@ -2,16 +2,16 @@
     'use strict';
 
     angular
-        .module('DemoApp', [
+        .module('Blog', [
             'ngResource',
             'ngSanitize',
             'ui.router',
             'ui.bootstrap',
-            'DemoApp.footer',
-            'DemoApp.header',
-            'DemoApp.blog-factory',
-            'DemoApp.blog-service',
+            'Blog.footer',
+            'Blog.header',
+            'Blog.blog-factory',
+            'Blog.blog-service',
             'textAngular',
-            'DemoApp.limitHtml'
+            'Blog.limitHtml'
         ]);
 })();
