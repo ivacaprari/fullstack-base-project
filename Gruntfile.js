@@ -118,7 +118,7 @@ module.exports = function(grunt) {
               jshintrc : 'server/.jshintrc'
             },
             src : [ 'server/**/*.js', '!server/**/*.spec.js' ]
-          },
+          }
         },
 
         // Empties folders to start fresh
@@ -551,6 +551,5 @@ module.exports = function(grunt) {
       'cdnify', 'cssmin', 'uglify', 'rev', 'usemin' ]);
 
   grunt.registerTask('default', ['newer:jshint', 'build']);
-
-  grunt.registerTask('lint', ['jscs:all', 'jscs:app', 'jshint:all']);
+  grunt.registerTask('lint', ['jscs:all', 'jscs:app']);
 };
