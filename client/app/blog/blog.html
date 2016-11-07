@@ -1,0 +1,29 @@
+<div class="container blog">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>BLOG</h1>
+            <hr>
+                <a ui-sref="blog.new">
+                    <button class="btn btn-success btn-lg text-center">ADD NEW POST</button>
+                </a>
+            <hr>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <div ng-repeat="post in vm.posts" class="post">
+                <h1>{{post.title}}</h1>
+                <h5>{{post.date | date:'medium'}}</h5>
+                <p ng-bind-html="post.description | limitHtml:150"></p>
+                <div class="row text-center buttons">
+                    <a ui-sref="blog.edit({ id: post._id })">
+                        <button class="btn btn-success btn-lg">EDIT</button>
+                    </a>
+                    <button class="btn btn-success btn-lg"ng-click="vm.deletePost(post)">DELETE</button>
+                    <hr>
+                </div>
+            </div>
+            <div ng-if="vm.posts.length === 0" class="text-center">
+                <h1>NO REGISTRIES</h1>
+            </div>
+        </div>
+    </div>
+</div>

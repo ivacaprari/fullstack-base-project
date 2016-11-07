@@ -1,0 +1,7 @@
+node_modules
+public
+.tmp
+dist
+client/bower_components
+npm-debug.log
+logs.txt

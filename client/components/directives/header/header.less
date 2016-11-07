@@ -1,0 +1,121 @@
+ng-header {
+    .container {
+        padding-right: 0;
+    }
+    .dropdown-menu {
+        background-color: @brand-primary!important;
+        color: @brand-success;
+    }
+    .navbar-default.navbar {
+        font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        text-transform: uppercase;
+        font-weight: 700;
+        background-color: @brand-primary;
+        border: none;
+        .navbar-toggle {
+            background-color: @text-main;
+            &:hover,
+            &:focus,
+            .icon-bar {
+                background-color: @brand-success;
+            }
+            &:hover .icon-bar,
+            &:focus .icon-bar {
+                background-color: @text-main;
+            }
+        }
+        a:focus {
+            outline: none;
+        }
+        .navbar-nav {
+            letter-spacing: 1px;
+            &> .open > a {
+                    background-color: @brand-primary!important;
+                    color: @brand-success;
+                    &:focus,
+                    &:hover {
+                        color: @brand-success;
+                    }
+            }
+            li {
+                a {
+                    color: @text-main;
+                     &:hover,
+                     &:focus {
+                        outline: none;
+                        color: @brand-success;
+                    }
+                }
+            }
+        }
+        .active > a {
+            background-color: @brand-success!important;
+            color: @text-main!important;
+            &:hover,
+            &:focus {
+                color: @text-main;
+                background-color: @brand-success!important;
+            }
+        }
+        .navbar-text,
+        .fa-user {
+            color: @text-main;
+        }
+        .navbar-brand {
+            color: @brand-success;
+            &:hover {
+                color: @text-main;
+            }
+            &:focus {
+                color: @brand-success;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li {
+        &> a {
+            color: @text-main;
+            &:hover,
+            &:focus {
+                color: @brand-success;
+            }
+        }
+        &:hover {
+            background-color: @text-main;
+        }
+    }
+}
+
+@media(min-width:@screen-sm-min) {
+    header {
+        .container {
+            padding-top: 200px;
+            padding-bottom: 100px;
+        }
+        .intro-text {
+            .name {
+                font-size: 4.75em;
+            }
+            .skills {
+                font-size: 1.75em;
+            }
+        }
+    }
+}
+
+@media(min-width:@screen-sm-min) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+        -webkit-transition: padding 0.3s;
+        -moz-transition: padding 0.3s;
+        transition: padding 0.3s;
+        .navbar-brand {
+            font-size: 2em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    }
+}

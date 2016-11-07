@@ -1,0 +1,53 @@
+.button-variant(@color; @background; @border) {
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open .dropdown-toggle& {
+        color: @color;
+        background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+    }
+    &:active,
+    &.active,
+    .open .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            background-color: @background;
+            border-color: @border;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+}
+.starting-page(@selector) {
+    .@{selector} {
+        margin-top: 50px;
+        min-height: 310px;
+        .buttons {
+            margin: 20px 0;
+        }
+    }
+
+    @media(min-width:@screen-sm-min) {
+        .@{selector} {
+            margin-top: 100px;
+            min-height: 410px;
+        }
+    }
+}
