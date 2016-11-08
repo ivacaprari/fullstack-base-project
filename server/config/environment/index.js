@@ -32,12 +32,9 @@ var all = {
     session: 'demoApp-secret'
   },
 
-  // List of user roles
-  userRoles: ['guest', 'user', 'admin'],
-
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/demoApp-dev',
+    uri: process.env.MONGODB_URI || 'mongodb://localhost/demoApp-dev',
     options: {
       db: {
         safe: true
