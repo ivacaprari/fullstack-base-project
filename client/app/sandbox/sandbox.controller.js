@@ -8,7 +8,7 @@
     SandboxCtrl.$inject = ['$stateParams'];
 
     /* @ngInject */
-    function BlogCtrl($stateParams) {
+    function SandboxCtrl($stateParams) {
         var vm = this;
     }
 })();
