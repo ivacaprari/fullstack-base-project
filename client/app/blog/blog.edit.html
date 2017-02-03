@@ -7,10 +7,10 @@
             <form class="form" name="vm.form" ng-submit="vm.editPost()" novalidate>
                 <div class="row control-group" ng-class="{ 'has-success': vm.form.title.$valid && vm.submitted,'has-error': vm.form.title.$invalid && vm.submitted }">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
-                        <label>Title</label>
-                        <input type="text" class="form-control" placeholder="Title" name="title" ng-model="vm.post.title" required>
+                        <label>Título</label>
+                        <input type="text" class="form-control" placeholder="Título" name="title" ng-model="vm.post.title" required>
                         <p class="help-block" ng-show="vm.form.title.$error.required && vm.submitted">
-                            Title is required
+                            El título es requerido
                         </p>
                     </div>
                 </div>
@@ -19,13 +19,13 @@
                         <h5>Post</h5>
                         <div text-angular ng-model="vm.post.description" name="description" required></div>
                         <p class="help-block" ng-show="vm.form.description.$error.required && vm.submitted">
-                            Description is required
+                            La descripción es requerida
                         </p>
                     </div>
                 </div>
                 <div class="row text-center buttons">
                     <button type="submit" class="btn btn-success btn-lg">
-                        SAVE
+                        GUARDAR
                     </button>
                 </div>
             </form>
