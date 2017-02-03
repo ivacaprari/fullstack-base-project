@@ -5,7 +5,6 @@
                 <div class="col-lg-12 text-center">
                     <h2>Blog</h2>
                     <hr>
-                    <hr>
                 </div>
             </div>
             <div class="row">
@@ -15,7 +14,7 @@
                     <p ng-bind-html="post.description | limitHtml:100"></p>
                     <a href="#postModal{{$index}}" class="portfolio-link" data-toggle="modal">
                         <button class="btn btn-lg btn-outline">
-                           Show more
+                           Mostrar más
                         </button>
                     </a>
                     <hr>
@@ -40,7 +39,7 @@
                             <h5>{{post.date | date:'medium'}}</h5>
                             <hr>
                             <p ng-bind-html="post.description"></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default btn-outline" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
                     </div>
                 </div>

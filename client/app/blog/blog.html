@@ -4,7 +4,7 @@
             <h1>BLOG</h1>
             <hr>
                 <a ui-sref="blog.new">
-                    <button class="btn btn-success btn-lg text-center">ADD NEW POST</button>
+                    <button class="btn btn-success btn-lg text-center">AGREGAR NUEVO POST</button>
                 </a>
             <hr>
         </div>
@@ -15,14 +15,14 @@
                 <p ng-bind-html="post.description | limitHtml:150"></p>
                 <div class="row text-center buttons">
                     <a ui-sref="blog.edit({ id: post._id })">
-                        <button class="btn btn-success btn-lg">EDIT</button>
+                        <button class="btn btn-success btn-lg">EDITAR</button>
                     </a>
-                    <button class="btn btn-success btn-lg"ng-click="vm.deletePost(post)">DELETE</button>
+                    <button class="btn btn-success btn-lg"ng-click="vm.deletePost(post)">BORRAR</button>
                     <hr>
                 </div>
             </div>
             <div ng-if="vm.posts.length === 0" class="text-center">
-                <h1>NO REGISTRIES</h1>
+                <h1>NO HAY ENTRADAS</h1>
             </div>
         </div>
     </div>
